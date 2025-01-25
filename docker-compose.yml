@@ -1,0 +1,8 @@
+services:
+    discord-bot:
+        build: .
+        environment:
+            - TOKEN=${TOKEN}
+        volumes:
+            - .:/app
+        restart: unless-stopped
