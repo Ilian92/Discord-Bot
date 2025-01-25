@@ -1,0 +1,14 @@
+{
+    "!help": {
+      "description": "Affiche toutes les commandes",
+      "usage": "!help"
+    },
+    "!ping": {
+      "description": "Répond avec \"Pong\"",
+      "usage": "!ping"
+    },
+    "!clear": {
+      "description": "Supprime des messages",
+      "usage": "!clear [nombre]"
+    }
+  }
