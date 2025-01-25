@@ -1,18 +1,28 @@
 {
-    "!help": {
-        "description": "Affiche toutes les commandes",
-        "usage": "!help"
+    "Général": {
+        "!help": {
+            "description": "Affiche toutes les commandes",
+            "usage": "!help"
+        },
+        "!ping": {
+            "description": "Répond avec \"Pong\"",
+            "usage": "!ping"
+        }
     },
-    "!ping": {
-        "description": "Répond avec \"Pong\"",
-        "usage": "!ping"
+    "Modération": {
+        "!clear": {
+            "description": "Supprime le nombre de messages spécifié",
+            "usage": "!clear [nombre]"
+        }
     },
-    "!clear": {
-        "description": "Supprime le nombre de messages spécifié",
-        "usage": "!clear [nombre]"
-    },
-    "!musique": {
-        "description": "Joue de la musique dans le salon vocale actuel",
-        "usage": "!musique [lien Youtube de la musique]"
+    "Musique": {
+        "!play": {
+            "description": "Joue une musique ou l'ajoute à la file d'attente",
+            "usage": "!play [lien YouTube]"
+        },
+        "!skip": {
+            "description": "Passe la musique en cours de lecture",
+            "usage": "!skip"
+        }
     }
 }
