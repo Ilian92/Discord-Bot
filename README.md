@@ -1,8 +1,8 @@
 # Bot Discord Par Ilian Igoudjil
 
-## Installations
+## Installation avec un environnement virtuel
 
-### Créer un environnement virtuel avec python3 si nécessaire
+### Créer un environnement virtuel avec python3
 
 (Si vous utilisez pip3 par exemple)
 
@@ -22,15 +22,22 @@ Pour désactiver l'environnement virtuel:
 deactivate
 ```
 
-### Installer toutes les dépendances
+### Installer toutes les dépendances et ajouter celles installées à requirements.txt
 
 ```
 pip install -r requirements.txt
 ```
 
-### Ajouter d'autres dépendances installés à requirements.txt
+## Installation avec Docker
+
+### Build et création du conteneur (le bot se met en ligne directement)
 
 ```
-pip install -r requirements.txt
+docker compose up -d --build
 ```
 
+### Accès au terminal du conteneur
+
+```
+docker-compose exec discord-bot bash
+```
