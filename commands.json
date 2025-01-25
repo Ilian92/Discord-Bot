@@ -1,14 +1,18 @@
 {
     "!help": {
-      "description": "Affiche toutes les commandes",
-      "usage": "!help"
+        "description": "Affiche toutes les commandes",
+        "usage": "!help"
     },
     "!ping": {
-      "description": "Répond avec \"Pong\"",
-      "usage": "!ping"
+        "description": "Répond avec \"Pong\"",
+        "usage": "!ping"
     },
     "!clear": {
-      "description": "Supprime des messages",
-      "usage": "!clear [nombre]"
+        "description": "Supprime le nombre de messages spécifié",
+        "usage": "!clear [nombre]"
+    },
+    "!musique": {
+        "description": "Joue de la musique dans le salon vocale actuel",
+        "usage": "!musique [lien Youtube de la musique]"
     }
-  }
+}
