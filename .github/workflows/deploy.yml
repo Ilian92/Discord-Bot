@@ -12,6 +12,8 @@ jobs:
         steps:
             - name: Checkout du code
               uses: actions/checkout@v3
+              with:
+                  token: ${{ secrets.ACCESS_TOKEN }} # Token d'accès
 
             - name: Déployer sur Azure VM
               uses: appleboy/ssh-action@v0.1.10
@@ -19,7 +21,6 @@ jobs:
                   host: ${{ secrets.AZURE_VM_IP }} # Adresse IP de la VM Azure
                   username: ${{ secrets.AZURE_VM_USERNAME }} # Nom d'utilisateur SSH
                   key: ${{ secrets.AZURE_VM_SSH_KEY }} # Clé SSH privée
-                  token: ${{ secrets.ACCESS_TOKEN }} # Token d'accès
                   script: |
                       cd /home/azureuser
                       if [ -d "Discord-Bot" ]; then
