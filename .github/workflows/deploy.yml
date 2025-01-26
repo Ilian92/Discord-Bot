@@ -26,8 +26,8 @@ jobs:
                         git fetch --all
                         git reset --hard origin/main
                       else
-                        git clone https://github.com/votre_nom_utilisateur/votre_repo.git mon-repo
-                        cd mon-repo
+                        git clone https://github.com/Ilian92/Discord-Bot.git Discord-Bot
+                        cd Discord-Bot
                       fi
                       source venv/bin/activate
                       pip install -r requirements.txt
