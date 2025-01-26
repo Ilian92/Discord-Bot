@@ -41,3 +41,13 @@ docker compose up -d --build
 ```
 docker-compose exec discord-bot bash
 ```
+
+## Commandes utiles
+
+### Lancer le bot
+
+Se placer dans le dossier du projet (et lancer l'environnement virtuel) puis:
+
+```
+python3 main.py
+```
