@@ -1,0 +1,33 @@
+name: Déploiement sur Azure VM
+
+on:
+    push:
+        branches:
+            - main # Déclenche le déploiement uniquement pour la branche main
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout du code
+              uses: actions/checkout@v3
+
+            - name: Déployer sur Azure VM
+              uses: appleboy/ssh-action@v0.1.10
+              with:
+                  host: ${{ secrets.AZURE_VM_IP }} # Adresse IP de la VM Azure
+                  username: ${{ secrets.AZURE_VM_USERNAME }} # Nom d'utilisateur SSH
+                  key: ${{ secrets.AZURE_VM_SSH_KEY }} # Clé SSH privée
+                  script: |
+                      cd /home/azureuser
+                      if [ -d "mon-repo" ]; then
+                        cd mon-repo
+                        git fetch --all
+                        git reset --hard origin/main
+                      else
+                        git clone https://github.com/votre_nom_utilisateur/votre_repo.git mon-repo
+                        cd mon-repo
+                      fi
+                      source venv/bin/activate
+                      pip install -r requirements.txt
