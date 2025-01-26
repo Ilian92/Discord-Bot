@@ -19,10 +19,11 @@ jobs:
                   host: ${{ secrets.AZURE_VM_IP }} # Adresse IP de la VM Azure
                   username: ${{ secrets.AZURE_VM_USERNAME }} # Nom d'utilisateur SSH
                   key: ${{ secrets.AZURE_VM_SSH_KEY }} # Clé SSH privée
+                  token: ${{ secrets.ACCESS_TOKEN }} # Token d'accès
                   script: |
                       cd /home/azureuser
-                      if [ -d "mon-repo" ]; then
-                        cd mon-repo
+                      if [ -d "Discord-Bot" ]; then
+                        cd Discord-Bot
                         git fetch --all
                         git reset --hard origin/main
                       else
