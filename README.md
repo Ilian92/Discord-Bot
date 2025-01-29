@@ -48,6 +48,6 @@ docker-compose exec discord-bot bash
 
 Se placer dans le dossier du projet (et lancer l'environnement virtuel) puis:
 
-```
+```bash
 python3 main.py
 ```
