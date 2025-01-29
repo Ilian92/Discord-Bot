@@ -27,7 +27,8 @@ ytdl_format_options = {
 }
 
 ffmpeg_options = {
-    'options': '-vn'
+    'options': '-vn',
+    'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5'
 }
 
 class MusicCommands(commands.Cog):
@@ -84,7 +85,7 @@ class MusicCommands(commands.Cog):
             vc = self.voice_clients[guild_id]
 
             vc.play(
-                nextcord.FFmpegPCMAudio(song_info['url'], **ffmpeg_options),
+                nextcord.FFmpegOpusAudio(song_info['url'], **ffmpeg_options),
                 after=lambda e: self.bot.loop.create_task(self.on_play_end(guild_id))
             )
             await self.bot.get_channel(song_info['channel_id']).send(f"🎵 Lecture de : **{song_info['title']}**")
