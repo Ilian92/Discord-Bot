@@ -25,6 +25,7 @@ ytdl_format_options = {
         'preferredcodec': 'mp3',
         'preferredquality': '192',
     }],
+    'cookies': '/home/azureuser/cookies.txt',
 }
 
 ffmpeg_options = {
